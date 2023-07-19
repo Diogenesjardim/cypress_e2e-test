@@ -6,7 +6,7 @@ describe("Scenarios where authentication is a pre-condition", () => {
     cy.sessionLogin();
   });
 
-  it.only("CRUDs a note", () => {
+  it("CRUDs a note", () => {
     const noteDescription = faker.lorem.words(4);
 
     cy.createNote(noteDescription);
@@ -22,7 +22,7 @@ describe("Scenarios where authentication is a pre-condition", () => {
     cy.wait("@getNotes", { timeout: 50000 });
   });
 
-  it.only("successfully submits the settings form", () => {
+  it("successfully submits the settings form", () => {
     cy.intercept("POST", "**/prod/billing").as("paymentRequest");
 
     cy.fillSettingsFormAndSubmit();
@@ -31,7 +31,7 @@ describe("Scenarios where authentication is a pre-condition", () => {
     cy.wait("@paymentRequest").its("state").should("be.equal", "Complete");
   });
 
-  it.only("logs out", { tags: "@desktop-and-tablet" }, () => {
+  it("logs out", { tags: "@desktop-and-tablet" }, () => {
     cy.visit("/");
     cy.wait("@getNotes", { timeout: 50000 });
 
