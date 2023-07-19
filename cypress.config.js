@@ -9,9 +9,7 @@ module.exports = defineConfig({
     },
 
     defaultCommandTimeout: 50000,
-
-    // setupNodeEvents(on, config) {
-    //   // implement node event listeners here
-    // },
   },
+
+  projectId: "fqq4gd",
 });
