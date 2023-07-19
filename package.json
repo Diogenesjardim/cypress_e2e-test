@@ -1,7 +1,7 @@
 {
   "name": "cypress-e2s-test",
   "version": "1.0.0",
-  "description": "TBD.",
+  "description": "Sample project to demonstrate e2e tests written with Cypress running on GitHub Actions.",
   "main": "index.js",
   "scripts": {
     "lint": "eslint cypress/**/*.js && eslint cypress.config.js",
@@ -14,7 +14,7 @@
     "test:tablet:cloud": "cypress run --record --tag 'tablet' --config viewportWidth=767,viewportHeight=480 --spec cypress/e2e/authenticated.cy.js --env grepTags=@desktop-and-tablet,grepOmitFiltered=true"
   },
   "keywords": [],
-  "author": "",
+  "author": "Diógenes Jardim",
   "license": "ISC",
   "devDependencies": {
     "@cypress/grep": "^3.1.5",
