@@ -10,6 +10,10 @@ module.exports = defineConfig({
 
     defaultCommandTimeout: 50000,
   },
+  setupNodeEvents(on, config) {
+    require("@cypress/grep/src/plugin")(config);
+    return config;
+  },
 
   projectId: "fqq4gd",
 });
